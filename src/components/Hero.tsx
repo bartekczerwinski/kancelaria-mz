@@ -6,18 +6,23 @@ import heroBackground from "@/assets/hero-background.jpg";
 const Hero = () => {
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center bg-primary"
+      className="relative min-h-screen flex items-center pt-32"
       style={{
-        backgroundImage: `url(/lovable-uploads/06fdeca7-7fff-4a1e-8cd4-5b350350b654.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundColor: '#04090a'
       }}
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-primary/80" />
+      {/* Hero image positioned right */}
+      <div 
+        className="absolute right-0 top-0 w-2/3 h-full bg-right bg-cover bg-no-repeat"
+        style={{
+          backgroundImage: `url(/lovable-uploads/512b804b-c41a-48f8-859a-7dd89b441c23.png)`,
+          backgroundPosition: 'right center'
+        }}
+      />
       
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+      {/* Content overlay */}
+      
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-left w-1/2">
         <div className="max-w-4xl mx-auto">
           <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
             Twoja firma znajduje się w kryzysie?
