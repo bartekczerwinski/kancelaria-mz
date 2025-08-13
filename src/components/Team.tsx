@@ -96,54 +96,48 @@ const Team = () => {
           </div>
         </div>
 
-        {/* Creative concluding section with partners image */}
+        {/* Creative concluding section with dark green background */}
         <div className="mt-16 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Right side - Image */}
-            <div className="relative order-2 lg:order-2">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src="/lovable-uploads/ba42eb7a-951d-4590-b44b-43b659f77630.png" 
-                  alt="Marcin Misztal i Konrad Zalewski - Partnerzy Kancelarii"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-              </div>
-              {/* Decorative element */}
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
-            </div>
-
-            {/* Left side - Content */}
-            <div className="order-1 lg:order-1 space-y-6">
-              <div className="relative">
-                <div className="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-primary to-transparent rounded-full"></div>
-                <div className="pl-8">
-                  <p className="text-lg text-foreground leading-relaxed">
+          <div className="bg-[#04090a] rounded-2xl p-8 md:p-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Left side - Content */}
+              <div className="order-1 lg:order-1 space-y-6">
+                <div>
+                  <p className="text-lg text-white leading-relaxed">
                     W Kancelarii Misztal Zalewski kierujemy się głębokim poczuciem odpowiedzialności, pomagamy przedsiębiorcom w kryzysie odzyskać stabilność i ochronić to, co najcenniejsze. Łączymy prawo, finanse i praktykę biznesową, aby tworzyć rozwiązania, które naprawdę działają.
                   </p>
                 </div>
-              </div>
 
-              <div className="relative">
-                <div className="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-primary/60 to-transparent rounded-full"></div>
-                <div className="pl-8">
-                  <p className="text-lg text-foreground leading-relaxed">
+                <div>
+                  <p className="text-lg text-white leading-relaxed">
                     Działamy szybko, etycznie i z pełnym zaangażowaniem. Każdą sprawę prowadzimy indywidualnie, uwzględniając realia branży i presję, pod jaką działa właściciel firmy.
+                  </p>
+                </div>
+
+                <div className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
+                  <p className="text-xl font-medium text-white">
+                    Naszym priorytetem jest Twoje bezpieczeństwo i skuteczny plan wyjścia z trudnej sytuacji.
                   </p>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-primary/5 to-transparent p-6 rounded-lg">
-                <p className="text-xl font-medium text-primary">
-                  Naszym priorytetem jest Twoje bezpieczeństwo i skuteczny plan wyjścia z trudnej sytuacji.
-                </p>
+              {/* Right side - Image */}
+              <div className="relative order-2 lg:order-2">
+                <div className="relative overflow-hidden rounded-xl">
+                  <img 
+                    src="/lovable-uploads/ba42eb7a-951d-4590-b44b-43b659f77630.png" 
+                    alt="Marcin Misztal i Konrad Zalewski - Partnerzy Kancelarii"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Bottom decorative line */}
-          <div className="mt-12 flex justify-center">
-            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+            {/* Bottom decorative line */}
+            <div className="mt-12 flex justify-center">
+              <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
+            </div>
           </div>
         </div>
       </div>
