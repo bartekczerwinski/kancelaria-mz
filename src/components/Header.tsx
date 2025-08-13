@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex h-32 items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="Misztal Zalewski" className="h-16 w-auto" />
+            <img src={logo} alt="Misztal Zalewski" className="h-20 w-auto" />
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
