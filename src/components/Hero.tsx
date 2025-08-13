@@ -49,7 +49,7 @@ const Hero = () => {
 
           {/* Statistics Card moved to bottom */}
           <Card 
-            className="p-6 md:p-8 max-w-lg border-0"
+            className="p-6 md:p-8 max-w-xl border-0"
             style={{ backgroundColor: '#04090a' }}
           >
             <div className="text-center">
