@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="bg-header-footer backdrop-blur sticky top-0 z-50 w-full border-b border-border">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="flex h-30 items-center justify-between">
+        <div className="flex h-32 items-center justify-between">
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Misztal Zalewski" className="h-16 w-auto" />
           </div>
