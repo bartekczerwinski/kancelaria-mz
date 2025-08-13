@@ -7,13 +7,15 @@ const Team = () => {
       name: "Marcin Misztal",
       role: "Partner",
       specialization: "Licencjonowany doradca restrukturyzacyjny i adwokat",
-      description: "Licencjonowany doradca restrukturyzacyjny i adwokat z wieloletnim doświadczeniem w prowadzeniu postępowań restrukturyzacyjnych i upadłościowych. Łączy wiedzę prawniczą z praktyką zarządzania przedsiębiorstwami, pomagając firmom w kryzysie odzyskać stabilność i płynność finansową. Ekspert w dziedzinie tworzenia strategii restrukturyzacyjnej przedsiębiorstw. W Kancelarii MZ odpowiada za przygotowanie realistycznych prognoz i planów spłat, które umożliwiają firmom przejście przez proces restrukturyzacji bez utraty płynności. Będąc osobą z natury spokojną i opanowaną łagodzi emocje i wprowadza atmosferę racjonalnego dialogu. Swoją umiejętnością zachowania spokoju nawet w najtrudniejszych sytuacjach, emanuje na innych."
+      description: "Licencjonowany doradca restrukturyzacyjny i adwokat z wieloletnim doświadczeniem w prowadzeniu postępowań restrukturyzacyjnych i upadłościowych. Łączy wiedzę prawniczą z praktyką zarządzania przedsiębiorstwami, pomagając firmom w kryzysie odzyskać stabilność i płynność finansową. Ekspert w dziedzinie tworzenia strategii restrukturyzacyjnej przedsiębiorstw. W Kancelarii MZ odpowiada za przygotowanie realistycznych prognoz i planów spłat, które umożliwiają firmom przejście przez proces restrukturyzacji bez utraty płynności. Będąc osobą z natury spokojną i opanowaną łagodzi emocje i wprowadza atmosferę racjonalnego dialogu. Swoją umiejętnością zachowania spokoju nawet w najtrudniejszych sytuacjach, emanuje na innych.",
+      image: "/lovable-uploads/51df3420-34e2-4da6-9c19-3893989b9548.png"
     },
     {
       name: "Konrad Zalewski",
       role: "Partner",
       specialization: "Adwokat - prawo cywilne i gospodarcze",
-      description: "Adwokat specjalizujący się w prawie cywilnym i gospodarczym, w tym w obsłudze spółek prawa handlowego oraz negocjacjach z wierzycielami. Prawnik z bogatym doświadczeniem w prowadzeniu postępowań sądowych zarówno cywilnych, jak i gospodarczych. W pracy kieruje się rzetelnością i skutecznością, a każdą sprawę traktuje indywidualnie, dopasowując strategię do specyfiki branży i sytuacji klienta. Wyróżnia się umiejętnością tworzenia optymalnej płaszczyzny negocjacyjnej oraz wysokim poziomem umiejętności miękkich, dzięki czemu rozwiązanie nawet najtrudniejszego problemu staje się możliwe."
+      description: "Adwokat specjalizujący się w prawie cywilnym i gospodarczym, w tym w obsłudze spółek prawa handlowego oraz negocjacjach z wierzycielami. Prawnik z bogatym doświadczeniem w prowadzeniu postępowań sądowych zarówno cywilnych, jak i gospodarczych. W pracy kieruje się rzetelnością i skutecznością, a każdą sprawę traktuje indywidualnie, dopasowując strategię do specyfiki branży i sytuacji klienta. Wyróżnia się umiejętnością tworzenia optymalnej płaszczyzny negocjacyjnej oraz wysokim poziomem umiejętności miękkich, dzięki czemu rozwiązanie nawet najtrudniejszego problemu staje się możliwe.",
+      image: "/lovable-uploads/61b79cf5-69e8-47fa-aef1-8d3507c3c2fd.png"
     },
     {
       name: "Katarzyna Przemyska",
@@ -41,24 +43,56 @@ const Team = () => {
         <div className="max-w-6xl mx-auto space-y-8">
           {teamMembers.map((member, index) => (
             <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow">
-              <div className="grid md:grid-cols-4 gap-6">
-                <div className="md:col-span-1">
-                  <h3 className="text-2xl font-[100] text-card-foreground mb-2">
-                    {member.name}
-                  </h3>
-                  <Badge variant="secondary" className="mb-3">
-                    {member.role}
-                  </Badge>
-                  <p className="text-primary font-semibold">
-                    {member.specialization}
-                  </p>
+              {member.image ? (
+                // Layout with photo for Partners
+                <div className="grid md:grid-cols-5 gap-6 items-start">
+                  <div className="md:col-span-1">
+                    <div className="relative">
+                      <img 
+                        src={member.image} 
+                        alt={`${member.name} - ${member.role}`}
+                        className="w-full aspect-square object-cover rounded-lg shadow-lg"
+                      />
+                    </div>
+                  </div>
+                  <div className="md:col-span-1">
+                    <h3 className="text-2xl font-[100] text-card-foreground mb-2">
+                      {member.name}
+                    </h3>
+                    <Badge variant="secondary" className="mb-3">
+                      {member.role}
+                    </Badge>
+                    <p className="text-primary font-semibold">
+                      {member.specialization}
+                    </p>
+                  </div>
+                  <div className="md:col-span-3">
+                    <p className="text-muted-foreground leading-relaxed">
+                      {member.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="md:col-span-3">
-                  <p className="text-muted-foreground leading-relaxed">
-                    {member.description}
-                  </p>
+              ) : (
+                // Layout without photo for Experts
+                <div className="grid md:grid-cols-4 gap-6">
+                  <div className="md:col-span-1">
+                    <h3 className="text-2xl font-[100] text-card-foreground mb-2">
+                      {member.name}
+                    </h3>
+                    <Badge variant="secondary" className="mb-3">
+                      {member.role}
+                    </Badge>
+                    <p className="text-primary font-semibold">
+                      {member.specialization}
+                    </p>
+                  </div>
+                  <div className="md:col-span-3">
+                    <p className="text-muted-foreground leading-relaxed">
+                      {member.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              )}
             </Card>
           ))}
         </div>
