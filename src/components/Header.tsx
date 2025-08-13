@@ -16,13 +16,20 @@ const Header = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <header className="bg-header-footer backdrop-blur fixed top-0 z-50 w-full">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex h-32 items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <button onClick={scrollToTop} className="flex items-center space-x-3">
             <img src={logo} alt="Misztal Zalewski" className="h-20 w-auto" />
-          </div>
+          </button>
           
           <nav className="hidden md:flex items-center space-x-8">
             <button 
