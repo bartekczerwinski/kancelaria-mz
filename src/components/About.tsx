@@ -61,37 +61,28 @@ const About = () => {
           </div>
         </div>
 
-        {/* Feature cards with new design */}
+        {/* Feature cards with WhyUs styling */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="group relative">
-            <Card className="p-8 bg-card text-center hover:shadow-xl transition-all duration-300 border-t-4 border-primary/20 group-hover:border-primary">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy elastyczni</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Dostosujemy się do specyfiki prowadzonej przez Ciebie firmy i profilu Twojej działalności. Posiadamy wieloletnie doświadczenie w obsłudze przedsiębiorstw z różnych branż.
-              </p>
-            </Card>
-          </div>
+          <Card className="p-8 bg-card hover:shadow-lg transition-shadow text-center h-full">
+            <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy elastyczni</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Dostosujemy się do specyfiki prowadzonej przez Ciebie firmy i profilu Twojej działalności. Posiadamy wieloletnie doświadczenie w obsłudze przedsiębiorstw z różnych branż.
+            </p>
+          </Card>
           
-          <div className="group relative">
-            <Card className="p-8 bg-card text-center hover:shadow-xl transition-all duration-300 border-t-4 border-primary/20 group-hover:border-primary">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy w pełni mobilni</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                W razie zaistnienia takiej potrzeby, zorganizujemy spotkania, szkolenia, czy też negocjacje w dowolnej części kraju.
-              </p>
-            </Card>
-          </div>
+          <Card className="p-8 bg-card hover:shadow-lg transition-shadow text-center h-full">
+            <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy w pełni mobilni</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              W razie zaistnienia takiej potrzeby, zorganizujemy spotkania, szkolenia, czy też negocjacje w dowolnej części kraju.
+            </p>
+          </Card>
           
-          <div className="group relative">
-            <Card className="p-8 bg-card text-center hover:shadow-xl transition-all duration-300 border-t-4 border-primary/20 group-hover:border-primary">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy dla Ciebie</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Zostałeś pozwany przez wierzycieli? Grozi Ci egzekucja komornicza? Pomożemy Ci na każdym etapie postępowania sądowego.
-              </p>
-            </Card>
-          </div>
+          <Card className="p-8 bg-card hover:shadow-lg transition-shadow text-center h-full">
+            <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy dla Ciebie</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Zostałeś pozwany przez wierzycieli? Grozi Ci egzekucja komornicza? Pomożemy Ci na każdym etapie postępowania sądowego.
+            </p>
+          </Card>
         </div>
 
         {/* Bottom decorative element */}
