@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-primary text-primary-foreground">
+    <section id="contact" className="py-20 text-primary-foreground" style={{ backgroundColor: '#342923' }}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
