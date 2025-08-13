@@ -99,8 +99,8 @@ const Team = () => {
         {/* Creative concluding section with partners image */}
         <div className="mt-16 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative order-2 lg:order-1">
+            {/* Right side - Image */}
+            <div className="relative order-2 lg:order-2">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img 
                   src="/lovable-uploads/ba42eb7a-951d-4590-b44b-43b659f77630.png" 
@@ -113,8 +113,8 @@ const Team = () => {
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
             </div>
 
-            {/* Right side - Content */}
-            <div className="order-1 lg:order-2 space-y-6">
+            {/* Left side - Content */}
+            <div className="order-1 lg:order-1 space-y-6">
               <div className="relative">
                 <div className="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-primary to-transparent rounded-full"></div>
                 <div className="pl-8">
