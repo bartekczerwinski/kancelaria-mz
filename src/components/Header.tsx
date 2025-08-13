@@ -3,6 +3,19 @@ import { Phone, Mail } from "lucide-react";
 const logo = "/lovable-uploads/7bd148d3-8dd2-4063-80da-45425712203c.png";
 
 const Header = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 128; // Header height (h-32 = 128px)
+      const elementPosition = element.offsetTop - headerHeight;
+      
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header className="bg-header-footer backdrop-blur fixed top-0 z-50 w-full">
       <div className="container mx-auto px-4 sm:px-6">
@@ -12,24 +25,42 @@ const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-header-footer-foreground hover:text-gold transition-colors">
+            <button 
+              onClick={() => scrollToSection('services')} 
+              className="text-header-footer-foreground hover:text-gold transition-colors"
+            >
               Usługi
-            </a>
-            <a href="#process" className="text-header-footer-foreground hover:text-gold transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('process')} 
+              className="text-header-footer-foreground hover:text-gold transition-colors"
+            >
               Proces
-            </a>
-            <a href="#about" className="text-header-footer-foreground hover:text-gold transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-header-footer-foreground hover:text-gold transition-colors"
+            >
               O nas
-            </a>
-            <a href="#team" className="text-header-footer-foreground hover:text-gold transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('team')} 
+              className="text-header-footer-foreground hover:text-gold transition-colors"
+            >
               Zespół
-            </a>
-            <a href="#faq" className="text-header-footer-foreground hover:text-gold transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('faq')} 
+              className="text-header-footer-foreground hover:text-gold transition-colors"
+            >
               FAQ
-            </a>
-            <a href="#contact" className="text-header-footer-foreground hover:text-gold transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="text-header-footer-foreground hover:text-gold transition-colors"
+            >
               Kontakt
-            </a>
+            </button>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -43,7 +74,12 @@ const Header = () => {
                 <span>kancelaria@misztalzalewski.pl</span>
               </a>
             </div>
-            <Button variant="default" className="bg-gold hover:bg-gold-dark" style={{ color: '#04090a' }}>
+            <Button 
+              variant="default" 
+              className="bg-gold hover:bg-gold-dark" 
+              style={{ color: '#04090a' }}
+              onClick={() => scrollToSection('contact')}
+            >
               Umów konsultację
             </Button>
           </div>
