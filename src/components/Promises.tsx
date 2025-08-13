@@ -39,18 +39,16 @@ const Promises = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {promises.map((promise, index) => {
-            const IconComponent = promise.icon;
             return (
-              <Card key={index} className="p-8 text-center bg-card hover:shadow-lg transition-shadow">
-                <div className="flex justify-center mb-6">
-                  <div className="p-4 bg-primary/10 rounded-full">
-                    <IconComponent className="h-8 w-8 text-primary" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-card-foreground mb-4">
+              <Card 
+                key={index} 
+                className="p-8 text-center hover:shadow-lg transition-shadow border-0"
+                style={{ backgroundColor: '#342923' }}
+              >
+                <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
                   {promise.title}
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-white/90 text-lg">
                   {promise.description}
                 </p>
               </Card>
