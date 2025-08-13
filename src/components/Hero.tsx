@@ -37,7 +37,8 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Button 
               size="lg" 
-              className="bg-gold hover:bg-gold-dark text-primary text-lg px-8 py-4 h-auto font-semibold"
+              className="bg-gold hover:bg-gold-dark text-lg px-8 py-4 h-auto font-semibold"
+              style={{ color: '#04090a' }}
             >
               Umów bezpłatną konsultację
             </Button>
