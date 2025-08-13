@@ -21,10 +21,17 @@ const Promises = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section 
+      className="py-20"
+      style={{
+        backgroundColor: '#3a2e27',
+        backgroundImage: `url(/lovable-uploads/443d78e4-0bda-42f4-9221-74dc81823394.png)`,
+        backgroundRepeat: 'repeat-x'
+      }}
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-[100] text-white mb-4">
             Obietnice, których dotrzymujemy
           </h2>
         </div>
