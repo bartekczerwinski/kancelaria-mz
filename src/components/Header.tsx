@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail } from "lucide-react";
+import ContactFormModal from "./ContactFormModal";
 const logo = "/lovable-uploads/7bd148d3-8dd2-4063-80da-45425712203c.png";
 
 const Header = () => {
@@ -77,14 +78,15 @@ const Header = () => {
                 <span>+48 501 047 762</span>
               </a>
             </div>
-            <Button 
-              variant="default" 
-              className="bg-gold hover:bg-gold-dark" 
-              style={{ color: '#04090a' }}
-              onClick={() => scrollToSection('contact')}
-            >
-              Umów konsultację
-            </Button>
+            <ContactFormModal>
+              <Button 
+                variant="default" 
+                className="bg-gold hover:bg-gold-dark" 
+                style={{ color: '#04090a' }}
+              >
+                Umów konsultację
+              </Button>
+            </ContactFormModal>
           </div>
         </div>
       </div>
