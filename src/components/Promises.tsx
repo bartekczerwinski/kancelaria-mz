@@ -6,11 +6,11 @@ const Promises = () => {
     {
       icon: Zap,
       title: "Natychmiastowe działania",
-      description: "Wstrzymamy egzekucję nawet w 2 dni"
+      description: "Wstrzymamy każdą egzekucję nawet w 2 dni"
     },
     {
       icon: TrendingDown,
-      title: "Zmniejszenie długu",
+      title: "Zmniejszenie długu Twojej firmy",
       description: "Realne, negocjowane z wierzycielami"
     },
     {
