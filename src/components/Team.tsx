@@ -96,19 +96,56 @@ const Team = () => {
           </div>
         </div>
 
-        <Card className="mt-16 p-8 md:p-12 bg-primary/5 border-primary/20">
-          <div className="text-center">
-            <p className="text-lg text-foreground leading-relaxed mb-6">
-              W Kancelarii Misztal Zalewski kierujemy się głębokim poczuciem odpowiedzialności, pomagamy przedsiębiorcom w kryzysie odzyskać stabilność i ochronić to, co najcenniejsze. Łączymy prawo, finanse i praktykę biznesową, aby tworzyć rozwiązania, które naprawdę działają.
-            </p>
-            <p className="text-lg text-foreground leading-relaxed">
-              Działamy szybko, etycznie i z pełnym zaangażowaniem. Każdą sprawę prowadzimy indywidualnie, uwzględniając realia branży i presję, pod jaką działa właściciel firmy.
-            </p>
-            <p className="text-xl font-semibold text-primary mt-6">
-              Naszym priorytetem jest Twoje bezpieczeństwo i skuteczny plan wyjścia z trudnej sytuacji.
-            </p>
+        {/* Creative concluding section with partners image */}
+        <div className="mt-16 relative">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src="/lovable-uploads/ba42eb7a-951d-4590-b44b-43b659f77630.png" 
+                  alt="Marcin Misztal i Konrad Zalewski - Partnerzy Kancelarii"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+              </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary/10 rounded-full blur-xl"></div>
+            </div>
+
+            {/* Right side - Content */}
+            <div className="order-1 lg:order-2 space-y-6">
+              <div className="relative">
+                <div className="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-primary to-transparent rounded-full"></div>
+                <div className="pl-8">
+                  <p className="text-lg text-foreground leading-relaxed">
+                    W Kancelarii Misztal Zalewski kierujemy się głębokim poczuciem odpowiedzialności, pomagamy przedsiębiorcom w kryzysie odzyskać stabilność i ochronić to, co najcenniejsze. Łączymy prawo, finanse i praktykę biznesową, aby tworzyć rozwiązania, które naprawdę działają.
+                  </p>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-primary/60 to-transparent rounded-full"></div>
+                <div className="pl-8">
+                  <p className="text-lg text-foreground leading-relaxed">
+                    Działamy szybko, etycznie i z pełnym zaangażowaniem. Każdą sprawę prowadzimy indywidualnie, uwzględniając realia branży i presję, pod jaką działa właściciel firmy.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/5 to-transparent p-6 rounded-lg">
+                <p className="text-xl font-medium text-primary">
+                  Naszym priorytetem jest Twoje bezpieczeństwo i skuteczny plan wyjścia z trudnej sytuacji.
+                </p>
+              </div>
+            </div>
           </div>
-        </Card>
+
+          {/* Bottom decorative line */}
+          <div className="mt-12 flex justify-center">
+            <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+          </div>
+        </div>
       </div>
     </section>
   );
