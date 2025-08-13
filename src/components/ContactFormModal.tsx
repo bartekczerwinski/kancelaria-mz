@@ -185,6 +185,7 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
               <Button 
                 type="submit" 
                 className="bg-gold hover:bg-gold-dark text-primary font-bold h-12 text-lg"
+                style={{ color: '#04090a' }}
                 disabled={form.formState.isSubmitting}
               >
                 {form.formState.isSubmitting ? "Wysyłanie..." : "Wyślij zapytanie"}

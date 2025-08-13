@@ -62,7 +62,8 @@ const Contact = () => {
             <ContactFormModal>
               <Button 
                 size="lg" 
-                className="bg-gold hover:bg-gold-dark text-primary text-xl px-12 py-6 h-auto font-bold mb-4"
+                className="bg-gold hover:bg-gold-dark text-xl px-12 py-6 h-auto font-bold mb-4"
+                style={{ color: '#04090a' }}
               >
                 Umów bezpłatną konsultację
               </Button>
