@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+const logo = "/lovable-uploads/7bd148d3-8dd2-4063-80da-45425712203c.png";
 
 const Footer = () => {
   return (
