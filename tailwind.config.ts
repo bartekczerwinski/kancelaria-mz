@@ -37,6 +37,10 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				'header-footer': {
+					DEFAULT: 'hsl(var(--header-footer))',
+					foreground: 'hsl(var(--header-footer-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
