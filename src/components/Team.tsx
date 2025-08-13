@@ -31,6 +31,9 @@ const Team = () => {
     }
   ];
 
+  const partners = teamMembers.filter(member => member.role === "Partner");
+  const experts = teamMembers.filter(member => member.role === "Ekspert");
+
   return (
     <section id="team" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
@@ -40,61 +43,57 @@ const Team = () => {
           </h2>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-8">
-          {teamMembers.map((member, index) => (
-            <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow">
-              {member.image ? (
-                // Layout with photo for Partners
-                <div className="grid md:grid-cols-5 gap-6 items-start">
-                  <div className="md:col-span-1">
-                    <div className="relative">
-                      <img 
-                        src={member.image} 
-                        alt={`${member.name} - ${member.role}`}
-                        className="w-full aspect-square object-cover rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </div>
-                  <div className="md:col-span-1">
-                    <h3 className="text-2xl font-[100] text-card-foreground mb-2">
-                      {member.name}
-                    </h3>
-                    <Badge variant="secondary" className="mb-3">
-                      {member.role}
-                    </Badge>
-                    <p className="text-primary font-semibold">
-                      {member.specialization}
-                    </p>
-                  </div>
-                  <div className="md:col-span-3">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {member.description}
-                    </p>
-                  </div>
+        {/* Partners Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-8">
+            {partners.map((partner, index) => (
+              <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow text-center">
+                <div className="mb-6">
+                  <img 
+                    src={partner.image} 
+                    alt={`${partner.name} - ${partner.role}`}
+                    className="w-48 h-48 object-cover rounded-lg shadow-lg mx-auto mb-4"
+                  />
+                  <h3 className="text-3xl font-[100] text-card-foreground mb-2">
+                    {partner.name}
+                  </h3>
+                  <Badge variant="secondary" className="mb-3">
+                    {partner.role}
+                  </Badge>
+                  <p className="text-primary font-semibold text-lg mb-4">
+                    {partner.specialization}
+                  </p>
                 </div>
-              ) : (
-                // Layout without photo for Experts
-                <div className="grid md:grid-cols-4 gap-6">
-                  <div className="md:col-span-1">
-                    <h3 className="text-2xl font-[100] text-card-foreground mb-2">
-                      {member.name}
-                    </h3>
-                    <Badge variant="secondary" className="mb-3">
-                      {member.role}
-                    </Badge>
-                    <p className="text-primary font-semibold">
-                      {member.specialization}
-                    </p>
-                  </div>
-                  <div className="md:col-span-3">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {member.description}
-                    </p>
-                  </div>
+                <p className="text-muted-foreground leading-relaxed text-left">
+                  {partner.description}
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Experts Section */}
+        <div className="max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-8">
+            {experts.map((expert, index) => (
+              <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow">
+                <div className="mb-4">
+                  <h3 className="text-2xl font-[100] text-card-foreground mb-2">
+                    {expert.name}
+                  </h3>
+                  <Badge variant="secondary" className="mb-3">
+                    {expert.role}
+                  </Badge>
+                  <p className="text-primary font-semibold">
+                    {expert.specialization}
+                  </p>
                 </div>
-              )}
-            </Card>
-          ))}
+                <p className="text-muted-foreground leading-relaxed">
+                  {expert.description}
+                </p>
+              </Card>
+            ))}
+          </div>
         </div>
 
         <Card className="mt-16 p-8 md:p-12 bg-primary/5 border-primary/20">
