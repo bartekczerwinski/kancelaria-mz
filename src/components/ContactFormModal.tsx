@@ -87,7 +87,7 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
             Umów bezpłatną konsultację
           </DialogTitle>
           <DialogDescription className="text-muted-foreground text-lg">
-            Wypełnij formularz, a skontaktujemy się z Tobą w ciągu 24 godzin.
+            Czas gra na Twoją niekorzyść. Wypełnij formularz, a skontaktujemy się z Tobą w ciągu 24 godzin.
           </DialogDescription>
         </DialogHeader>
         
