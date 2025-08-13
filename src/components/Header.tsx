@@ -43,7 +43,7 @@ const Header = () => {
                 <span>kancelaria@misztalzalewski.pl</span>
               </a>
             </div>
-            <Button variant="default" className="bg-primary hover:bg-primary-hover text-primary-foreground">
+            <Button variant="default" className="bg-primary hover:bg-primary-hover" style={{ color: '#04090a' }}>
               Umów konsultację
             </Button>
           </div>
