@@ -29,6 +29,7 @@ const formSchema = z.object({
   email: z.string().email("Nieprawidłowy adres email"),
   phone: z.string().min(9, "Numer telefonu musi mieć co najmniej 9 cyfr"),
   company: z.string().optional(),
+  nip: z.string().optional(),
   message: z.string().min(10, "Wiadomość musi mieć co najmniej 10 znaków"),
 });
 
@@ -49,6 +50,7 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
       email: "",
       phone: "",
       company: "",
+      nip: "",
       message: "",
     },
   });
@@ -79,26 +81,26 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
       <DialogTrigger asChild>
         {children}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[500px] bg-background border-border">
-        <DialogHeader>
-          <DialogTitle className="text-2xl font-[100] text-foreground">
+      <DialogContent className="sm:max-w-[600px] bg-background border-border max-h-[90vh] overflow-y-auto">
+        <DialogHeader className="pb-6">
+          <DialogTitle className="text-3xl font-[100] text-foreground">
             Umów bezpłatną konsultację
           </DialogTitle>
-          <DialogDescription className="text-muted-foreground">
+          <DialogDescription className="text-muted-foreground text-lg">
             Wypełnij formularz, a skontaktujemy się z Tobą w ciągu 24 godzin.
           </DialogDescription>
         </DialogHeader>
         
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 pt-2">
             <FormField
               control={form.control}
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Imię i nazwisko *</FormLabel>
+                  <FormLabel className="text-base">Imię i nazwisko *</FormLabel>
                   <FormControl>
-                    <Input placeholder="Jan Kowalski" {...field} />
+                    <Input placeholder="Jan Kowalski" className="h-12" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -110,9 +112,9 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email *</FormLabel>
+                  <FormLabel className="text-base">Email *</FormLabel>
                   <FormControl>
-                    <Input placeholder="jan@example.com" type="email" {...field} />
+                    <Input placeholder="jan@example.com" type="email" className="h-12" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -124,9 +126,9 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Telefon *</FormLabel>
+                  <FormLabel className="text-base">Telefon *</FormLabel>
                   <FormControl>
-                    <Input placeholder="+48 123 456 789" {...field} />
+                    <Input placeholder="+48 123 456 789" className="h-12" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -138,9 +140,23 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Nazwa firmy</FormLabel>
+                  <FormLabel className="text-base">Nazwa firmy</FormLabel>
                   <FormControl>
-                    <Input placeholder="ABC Sp. z o.o." {...field} />
+                    <Input placeholder="ABC Sp. z o.o." className="h-12" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            
+            <FormField
+              control={form.control}
+              name="nip"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel className="text-base">NIP</FormLabel>
+                  <FormControl>
+                    <Input placeholder="123-456-78-90" className="h-12" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -152,11 +168,11 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Opisz swoją sytuację *</FormLabel>
+                  <FormLabel className="text-base">Opisz swoją sytuację *</FormLabel>
                   <FormControl>
                     <Textarea 
                       placeholder="Opisz krótko swoją sytuację biznesową..."
-                      className="min-h-[100px]"
+                      className="min-h-[120px] resize-none"
                       {...field} 
                     />
                   </FormControl>
@@ -165,19 +181,14 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
               )}
             />
             
-            <div className="flex flex-col space-y-4 pt-4">
+            <div className="flex flex-col space-y-4 pt-6">
               <Button 
                 type="submit" 
-                className="bg-gold hover:bg-gold-dark text-primary font-bold"
+                className="bg-gold hover:bg-gold-dark text-primary font-bold h-12 text-lg"
                 disabled={form.formState.isSubmitting}
               >
                 {form.formState.isSubmitting ? "Wysyłanie..." : "Wyślij zapytanie"}
               </Button>
-              
-              <div className="flex items-center justify-center space-x-2 text-muted-foreground text-sm">
-                <Clock className="h-4 w-4" />
-                <span>Odpowiadamy w 24h</span>
-              </div>
             </div>
           </form>
         </Form>
