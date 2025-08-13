@@ -35,7 +35,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-primary/5 to-transparent p-6 rounded-lg border-l-4 border-primary">
+            <div className="bg-gradient-to-r from-primary/5 to-transparent p-8 rounded-lg">
               <p className="text-lg font-medium text-card-foreground leading-relaxed">
                 <strong>Misztal Zalewski Kancelaria Restrukturyzacyjna</strong> to interdyscyplinarny zespół licencjonowanych doradców restrukturyzacyjnych, adwokatów, doradców podatkowych, rzeczoznawców majątkowych oraz psychologów biznesu.
               </p>
@@ -58,9 +58,6 @@ const About = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary/30 rounded-full"></div>
           </div>
         </div>
 
@@ -69,7 +66,7 @@ const About = () => {
           <div className="group relative">
             <Card className="p-8 bg-card text-center hover:shadow-xl transition-all duration-300 border-t-4 border-primary/20 group-hover:border-primary">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-xl font-[100] text-primary mb-4">Jesteśmy elastyczni</h3>
+              <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy elastyczni</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Dostosujemy się do specyfiki prowadzonej przez Ciebie firmy i profilu Twojej działalności. Posiadamy wieloletnie doświadczenie w obsłudze przedsiębiorstw z różnych branż.
               </p>
@@ -79,7 +76,7 @@ const About = () => {
           <div className="group relative">
             <Card className="p-8 bg-card text-center hover:shadow-xl transition-all duration-300 border-t-4 border-primary/20 group-hover:border-primary">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-xl font-[100] text-primary mb-4">Jesteśmy w pełni mobilni</h3>
+              <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy w pełni mobilni</h3>
               <p className="text-muted-foreground leading-relaxed">
                 W razie zaistnienia takiej potrzeby, zorganizujemy spotkania, szkolenia, czy też negocjacje w dowolnej części kraju.
               </p>
@@ -89,7 +86,7 @@ const About = () => {
           <div className="group relative">
             <Card className="p-8 bg-card text-center hover:shadow-xl transition-all duration-300 border-t-4 border-primary/20 group-hover:border-primary">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-4 h-4 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-xl font-[100] text-primary mb-4">Jesteśmy dla Ciebie</h3>
+              <h3 className="text-2xl font-[100] text-primary mb-4">Jesteśmy dla Ciebie</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Zostałeś pozwany przez wierzycieli? Grozi Ci egzekucja komornicza? Pomożemy Ci na każdym etapie postępowania sądowego.
               </p>
