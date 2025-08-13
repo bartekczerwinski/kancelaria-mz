@@ -9,7 +9,7 @@ const About = () => {
             O nas
           </h2>
           <p className="text-xl text-foreground leading-relaxed max-w-3xl mx-auto">
-            Pomagamy przedsiębiorcom wyjść z najtrudniejszych sytuacji, z poczuciem bezpieczeństwa i planem na przyszłość.
+            Pomagamy przedsiębiorcom wyjść z najtrudniejszych sytuacji, z poczuciem bezpieczeństwa i planem na przyszłość. Naszą misją jest dać Ci drugą szansę i przygotować Cię na kolejne wyzwania.
           </p>
         </div>
 
@@ -41,11 +41,6 @@ const About = () => {
               </p>
             </div>
 
-            <div className="text-center lg:text-left">
-              <p className="text-primary font-medium text-xl italic">
-                Naszą misją jest dać Ci drugą szansę – i przygotować Cię na kolejne wyzwania.
-              </p>
-            </div>
           </div>
 
           {/* Right side - Image */}
