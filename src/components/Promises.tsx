@@ -26,7 +26,8 @@ const Promises = () => {
       style={{
         backgroundColor: '#3a2e27',
         backgroundImage: `url(/lovable-uploads/443d78e4-0bda-42f4-9221-74dc81823394.png)`,
-        backgroundRepeat: 'repeat-x'
+        backgroundRepeat: 'repeat-x',
+        backgroundPosition: 'top center'
       }}
     >
       <div className="container mx-auto px-4 sm:px-6">
