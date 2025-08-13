@@ -28,7 +28,7 @@ All colors MUST be HSL.
     --secondary-foreground: 192 35% 25%;
 
     /* Dark grey for header/footer */
-    --header-footer: 220 15% 20%;
+    --header-footer: 195 43% 3%;
     --header-footer-foreground: 0 0% 95%;
 
     /* Neutral greys */
@@ -86,7 +86,7 @@ All colors MUST be HSL.
     --secondary: 192 20% 20%;
     --secondary-foreground: 0 0% 95%;
 
-    --header-footer: 220 15% 15%;
+    --header-footer: 195 43% 3%;
     --header-footer-foreground: 0 0% 90%;
 
     --muted: 192 15% 18%;
