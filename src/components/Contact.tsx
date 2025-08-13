@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact" className="py-20 text-primary-foreground" style={{ backgroundColor: '#342923' }}>
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-[100] mb-6">
             Kontakt
           </h2>
           <p className="text-xl mb-4">
@@ -24,7 +24,7 @@ const Contact = () => {
               <div className="flex justify-center mb-4">
                 <Phone className="h-8 w-8 text-gold" />
               </div>
-              <h3 className="font-semibold mb-2">Zadzwoń</h3>
+              <h3 className="text-xl font-[100] mb-2">Zadzwoń</h3>
               <a 
                 href="tel:+48501047762" 
                 className="text-gold hover:text-gold-dark transition-colors font-semibold"
@@ -37,7 +37,7 @@ const Contact = () => {
               <div className="flex justify-center mb-4">
                 <Mail className="h-8 w-8 text-gold" />
               </div>
-              <h3 className="font-semibold mb-2">Napisz</h3>
+              <h3 className="text-xl font-[100] mb-2">Napisz</h3>
               <a 
                 href="mailto:kancelaria@misztalzalewski.pl" 
                 className="text-gold hover:text-gold-dark transition-colors font-semibold"
@@ -50,7 +50,7 @@ const Contact = () => {
               <div className="flex justify-center mb-4">
                 <MapPin className="h-8 w-8 text-gold" />
               </div>
-              <h3 className="font-semibold mb-2">Lokalizacja</h3>
+              <h3 className="text-xl font-[100] mb-2">Lokalizacja</h3>
               <p className="text-primary-foreground/90">
                 Lublin + obsługa zdalna w całej Polsce
               </p>
