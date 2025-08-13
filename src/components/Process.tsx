@@ -44,7 +44,7 @@ const Process = () => {
     <section id="process" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-[100] text-primary mb-4">
             Proces postępowania o zatwierdzenie układu
           </h2>
         </div>
@@ -62,7 +62,7 @@ const Process = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-card-foreground mb-3">
+                    <h3 className="text-xl font-[100] text-card-foreground mb-3">
                       {step.title}
                     </h3>
                     <p className="text-muted-foreground leading-relaxed">
