@@ -33,7 +33,7 @@ const Team = () => {
     <section id="team" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-[100] text-primary mb-4">
             Poznaj nasz zespół
           </h2>
         </div>
@@ -43,7 +43,7 @@ const Team = () => {
             <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow">
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="md:col-span-1">
-                  <h3 className="text-2xl font-bold text-card-foreground mb-2">
+                  <h3 className="text-2xl font-[100] text-card-foreground mb-2">
                     {member.name}
                   </h3>
                   <Badge variant="secondary" className="mb-3">
