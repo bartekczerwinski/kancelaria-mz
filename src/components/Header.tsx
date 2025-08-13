@@ -4,7 +4,7 @@ const logo = "/lovable-uploads/7bd148d3-8dd2-4063-80da-45425712203c.png";
 
 const Header = () => {
   return (
-    <header className="bg-header-footer backdrop-blur sticky top-0 z-50 w-full border-b border-border">
+    <header className="bg-header-footer backdrop-blur fixed top-0 z-50 w-full">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex h-32 items-center justify-between">
           <div className="flex items-center space-x-3">
