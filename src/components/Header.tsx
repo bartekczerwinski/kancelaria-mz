@@ -60,7 +60,7 @@ const Header = () => {
               onClick={() => scrollToSection('faq')} 
               className="text-header-footer-foreground hover:text-gold transition-colors"
             >
-              FAQ
+              Pytania
             </button>
             <button 
               onClick={() => scrollToSection('contact')} 
@@ -75,10 +75,6 @@ const Header = () => {
               <a href="tel:+48501047762" className="flex items-center space-x-2 text-sm text-header-footer-foreground/80 hover:text-gold transition-colors">
                 <Phone className="h-4 w-4" />
                 <span>+48 501 047 762</span>
-              </a>
-              <a href="mailto:kancelaria@misztalzalewski.pl" className="flex items-center space-x-2 text-sm text-header-footer-foreground/80 hover:text-gold transition-colors">
-                <Mail className="h-4 w-4" />
-                <span>kancelaria@misztalzalewski.pl</span>
               </a>
             </div>
             <Button 
