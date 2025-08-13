@@ -45,7 +45,7 @@ const FAQ = () => {
     <section id="faq" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h2 className="text-4xl md:text-5xl font-[100] text-primary mb-4">
             Najczęstsze pytania przedsiębiorców w kryzysie
           </h2>
         </div>
