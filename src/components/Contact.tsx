@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import ContactFormModal from "./ContactFormModal";
 
 const Contact = () => {
   return (
@@ -58,12 +59,14 @@ const Contact = () => {
           </div>
 
           <div className="text-center">
-            <Button 
-              size="lg" 
-              className="bg-gold hover:bg-gold-dark text-primary text-xl px-12 py-6 h-auto font-bold mb-4"
-            >
-              Umów bezpłatną konsultację
-            </Button>
+            <ContactFormModal>
+              <Button 
+                size="lg" 
+                className="bg-gold hover:bg-gold-dark text-primary text-xl px-12 py-6 h-auto font-bold mb-4"
+              >
+                Umów bezpłatną konsultację
+              </Button>
+            </ContactFormModal>
             <div className="flex items-center justify-center space-x-2 text-primary-foreground/90">
               <Clock className="h-5 w-5" />
               <span className="text-lg">odpowiadamy w 24h</span>

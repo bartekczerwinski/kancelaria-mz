@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import ContactFormModal from "./ContactFormModal";
 
 const Services = () => {
   return (
@@ -129,9 +130,11 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Dowiedz się, która opcja jest dla Ciebie
-          </Button>
+          <ContactFormModal>
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              Dowiedz się, która opcja jest dla Ciebie
+            </Button>
+          </ContactFormModal>
         </div>
       </div>
     </section>

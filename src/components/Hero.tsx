@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Clock } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
+import ContactFormModal from "./ContactFormModal";
 
 const Hero = () => {
   return (
@@ -35,13 +36,15 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button 
-              size="lg" 
-              className="bg-gold hover:bg-gold-dark text-lg px-8 py-4 h-auto font-semibold"
-              style={{ color: '#04090a' }}
-            >
-              Umów bezpłatną konsultację
-            </Button>
+            <ContactFormModal>
+              <Button 
+                size="lg" 
+                className="bg-gold hover:bg-gold-dark text-lg px-8 py-4 h-auto font-semibold"
+                style={{ color: '#04090a' }}
+              >
+                Umów bezpłatną konsultację
+              </Button>
+            </ContactFormModal>
             <div className="flex items-center space-x-2 text-primary-foreground">
               <Clock className="h-5 w-5" />
               <span className="text-lg">Reagujemy w 24h</span>
