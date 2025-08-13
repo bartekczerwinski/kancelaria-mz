@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-gold mb-2">4 457</div>
               <p className="text-primary-foreground/80 mb-4">
-                W 2024 r. aż <strong>4 457 firm w Polsce</strong> wybrało restrukturyzację zamiast upadłości.
+                <strong>4 457 firm w Polsce</strong> wybrało restrukturyzację zamiast upadłości w 2024 r.
               </p>
               <p className="text-lg font-semibold text-gold">
                 Daj szansę Twojej firmie na nowy początek.
