@@ -23,7 +23,7 @@ const Services = () => {
                   Bezpłatna analiza Twojej sytuacji i konkretny plan ratunkowy.
                 </p>
                 <p className="text-primary font-medium italic">
-                  → Zadzwoń dziś – niech czas zacznie działać na Twoją korzyść
+                  → Zadzwoń dzisiaj, niech czas zacznie działać na Twoją korzyść
                 </p>
               </div>
 
