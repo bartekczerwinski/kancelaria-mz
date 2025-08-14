@@ -14,10 +14,9 @@ const Hero = () => {
     >
       {/* Hero image full width */}
       <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-no-repeat"
+        className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-left md:bg-right bg-center"
         style={{
-          backgroundImage: `url(/lovable-uploads/512b804b-c41a-48f8-859a-7dd89b441c23.png)`,
-          backgroundPosition: 'right center'
+          backgroundImage: `url(/lovable-uploads/512b804b-c41a-48f8-859a-7dd89b441c23.png)`
         }}
       />
       
