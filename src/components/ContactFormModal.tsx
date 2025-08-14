@@ -22,6 +22,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Clock } from "lucide-react";
 
 const formSchema = z.object({
@@ -57,17 +58,28 @@ const ContactFormModal = ({ children }: ContactFormModalProps) => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Here you would typically send the data to your backend/Supabase
-      console.log("Form data:", data);
+      console.log("Submitting form data:", data);
+      
+      const { data: result, error } = await supabase.functions.invoke('send-contact-email', {
+        body: data,
+      });
+
+      if (error) {
+        console.error("Error calling edge function:", error);
+        throw error;
+      }
+
+      console.log("Edge function response:", result);
       
       toast({
         title: "Dziękujemy za kontakt!",
-        description: "Odpowiemy w ciągu 24 godzin.",
+        description: "Wiadomość została wysłana. Odpowiemy w ciągu 24 godzin.",
       });
       
       form.reset();
       setOpen(false);
-    } catch (error) {
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
       toast({
         title: "Błąd",
         description: "Wystąpił błąd podczas wysyłania formularza. Spróbuj ponownie.",
