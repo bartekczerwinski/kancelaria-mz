@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-left">
         <div className="max-w-2xl">
           <h1 className="hero-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-[100] text-primary-foreground mb-6 leading-tight">
-            Twoja firma znajduje się w kryzysie?
+            Twoja firma znajduje się&nbsp;w&nbsp;kryzysie?
           </h1>
           <h2 className="hero-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[100] text-gold mb-8">
             Masz drugą szansę.
