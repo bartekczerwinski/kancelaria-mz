@@ -21,13 +21,15 @@ const Team = () => {
       name: "Katarzyna Przemyska",
       role: "Ekspert",
       specialization: "Licencjonowany doradca podatkowy",
-      description: "Ekspert prawa podatkowego. Licencjonowany doradca podatkowy z wieloletnim doświadczeniem we współpracy z kancelariami, instytucjami finansowymi oraz sektorem prywatnym. Znana z umiejętności tworzenia kompleksowych rozwiązań w zakresie ekonomii, podatków i finansów, które realnie poprawiają kondycję firmy. Od lat skutecznie i z pasją doradza w budowaniu strategii ekonomicznej przedsiębiorstw."
+      description: "Ekspert prawa podatkowego. Licencjonowany doradca podatkowy z wieloletnim doświadczeniem we współpracy z kancelariami, instytucjami finansowymi oraz sektorem prywatnym. Znana z umiejętności tworzenia kompleksowych rozwiązań w zakresie ekonomii, podatków i finansów, które realnie poprawiają kondycję firmy. Od lat skutecznie i z pasją doradza w budowaniu strategii ekonomicznej przedsiębiorstw.",
+      image: "/lovable-uploads/kprzemyska.jpg"
     },
     {
       name: "Katarzyna Byjoś",
       role: "Ekspert",
       specialization: "Psycholog biznesu",
-      description: "Psycholog, specjalista w dziedzinie psychologii biznesu z doświadczeniem w prowadzeniu negocjacji z instytucjami i kluczowymi wierzycielami. W pracy łączy analityczne podejście z umiejętnością budowania porozumienia, nawet w sytuacjach silnego konfliktu interesów. Jej priorytetem jest osiąganie porozumień, które realnie chronią interes przedsiębiorcy."
+      description: "Psycholog, specjalista w dziedzinie psychologii biznesu z doświadczeniem w prowadzeniu negocjacji z instytucjami i kluczowymi wierzycielami. W pracy łączy analityczne podejście z umiejętnością budowania porozumienia, nawet w sytuacjach silnego konfliktu interesów. Jej priorytetem jest osiąganie porozumień, które realnie chronią interes przedsiębiorcy.",
+      image: "/lovable-uploads/kbyjos.jpg"
     }
   ];
 
@@ -76,19 +78,24 @@ const Team = () => {
         <div className="max-w-6xl mx-auto mb-16">
           <div className="grid md:grid-cols-2 gap-8">
             {experts.map((expert, index) => (
-              <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow">
-                <div className="mb-4">
-                  <h3 className="text-2xl font-[100] text-card-foreground mb-2">
+              <Card key={index} className="p-8 bg-card hover:shadow-lg transition-shadow text-center">
+                <div className="mb-6">
+                  <img 
+                    src={expert.image} 
+                    alt={`${expert.name} - ${expert.role}`}
+                    className="w-48 h-48 object-cover rounded-lg shadow-lg mx-auto mb-4"
+                  />
+                  <h3 className="text-3xl font-[100] text-card-foreground mb-2">
                     {expert.name}
                   </h3>
                   <Badge variant="secondary" className="mb-3">
                     {expert.role}
                   </Badge>
-                  <p className="text-primary font-semibold">
+                  <p className="text-primary font-semibold text-lg mb-4">
                     {expert.specialization}
                   </p>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-left">
                   {expert.description}
                 </p>
               </Card>
