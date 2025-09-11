@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { useEffect } from "react";
 
 const FAQ = () => {
   const faqs = [
@@ -41,42 +40,6 @@ const FAQ = () => {
       answer: "Możesz objąć: kredyty bankowe i pożyczki, leasingi, zobowiązania handlowe wobec dostawców, zaległości podatkowe i ZUS (w określonym trybie), czynsze, media i inne koszty stałe. Nie można objąć m.in.: wierzytelności alimentacyjnych, rent uzyskanych z odszkodowań, wierzytelności ze stosunku pracy czy niektórych wierzytelności zabezpieczonych. W takich przypadkach doradzimy Ci inne rozwiązania."
     }
   ];
-
-  // Add FAQ structured data
-  useEffect(() => {
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": faq.answer
-        }
-      }))
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    script.id = 'faq-structured-data';
-    
-    // Remove existing script if it exists
-    const existing = document.getElementById('faq-structured-data');
-    if (existing) {
-      existing.remove();
-    }
-    
-    document.head.appendChild(script);
-
-    return () => {
-      const scriptToRemove = document.getElementById('faq-structured-data');
-      if (scriptToRemove) {
-        scriptToRemove.remove();
-      }
-    };
-  }, [faqs]);
 
   return (
     <section id="faq" className="py-20 bg-background">
