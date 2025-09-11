@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -40,6 +41,36 @@ const FAQ = () => {
       answer: "Możesz objąć: kredyty bankowe i pożyczki, leasingi, zobowiązania handlowe wobec dostawców, zaległości podatkowe i ZUS (w określonym trybie), czynsze, media i inne koszty stałe. Nie można objąć m.in.: wierzytelności alimentacyjnych, rent uzyskanych z odszkodowań, wierzytelności ze stosunku pracy czy niektórych wierzytelności zabezpieczonych. W takich przypadkach doradzimy Ci inne rozwiązania."
     }
   ];
+
+  // Generate FAQ JSON-LD schema
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
+  useEffect(() => {
+    // Add FAQ schema to document head
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup on unmount
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript && existingScript.textContent?.includes('@type":"FAQPage')) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
 
   return (
     <section id="faq" className="py-20 bg-background">
