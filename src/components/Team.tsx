@@ -53,8 +53,9 @@ const Team = () => {
                 <div className="mb-6">
                   <img 
                     src={partner.image} 
-                    alt={`${partner.name} - ${partner.role}`}
+                    alt={`${partner.name} - Partner Kancelarii Restrukturyzacyjnej Misztal Zalewski, ${partner.specialization} w Lublinie`}
                     className="w-48 h-48 object-cover rounded-lg shadow-lg mx-auto mb-4"
+                    loading="lazy"
                   />
                   <h3 className="text-3xl font-[100] text-card-foreground mb-2">
                     {partner.name}
@@ -82,8 +83,9 @@ const Team = () => {
                 <div className="mb-6">
                   <img 
                     src={expert.image} 
-                    alt={`${expert.name} - ${expert.role}`}
+                    alt={`${expert.name} - Ekspert Kancelarii Restrukturyzacyjnej Misztal Zalewski, ${expert.specialization} w Lublinie`}
                     className="w-48 h-48 object-cover rounded-lg shadow-lg mx-auto mb-4"
+                    loading="lazy"
                   />
                   <h3 className="text-3xl font-[100] text-card-foreground mb-2">
                     {expert.name}
@@ -133,8 +135,9 @@ const Team = () => {
                 <div className="relative overflow-hidden rounded-xl">
                   <img 
                     src="/lovable-uploads/ba42eb7a-951d-4590-b44b-43b659f77630.png" 
-                    alt="Marcin Misztal i Konrad Zalewski - Partnerzy Kancelarii"
+                    alt="Marcin Misztal i Konrad Zalewski - Partnerzy Kancelarii Restrukturyzacyjnej w Lublinie, doradcy restrukturyzacyjni z wieloletnim doświadczeniem"
                     className="w-full h-auto object-cover"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 </div>
