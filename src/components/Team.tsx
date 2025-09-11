@@ -22,14 +22,14 @@ const Team = () => {
       role: "Ekspert",
       specialization: "Licencjonowany doradca podatkowy",
       description: "Ekspert prawa podatkowego. Licencjonowany doradca podatkowy z wieloletnim doświadczeniem we współpracy z kancelariami, instytucjami finansowymi oraz sektorem prywatnym. Znana z umiejętności tworzenia kompleksowych rozwiązań w zakresie ekonomii, podatków i finansów, które realnie poprawiają kondycję firmy. Od lat skutecznie i z pasją doradza w budowaniu strategii ekonomicznej przedsiębiorstw.",
-      image: "/lovable-uploads/kprzemyska.jpg"
+      image: "/lovable-uploads/ea5174ea-140b-4920-8284-c23fc1de87b7.png"
     },
     {
       name: "Katarzyna Byjoś",
       role: "Ekspert",
       specialization: "Psycholog biznesu",
       description: "Psycholog, specjalista w dziedzinie psychologii biznesu z doświadczeniem w prowadzeniu negocjacji z instytucjami i kluczowymi wierzycielami. W pracy łączy analityczne podejście z umiejętnością budowania porozumienia, nawet w sytuacjach silnego konfliktu interesów. Jej priorytetem jest osiąganie porozumień, które realnie chronią interes przedsiębiorcy.",
-      image: "/lovable-uploads/kbyjos.jpg"
+      image: "/lovable-uploads/7e76d3a5-6af1-4773-852d-ceb87b2dbbb1.png"
     }
   ];
 
