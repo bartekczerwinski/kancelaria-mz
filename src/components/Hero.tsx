@@ -23,13 +23,13 @@ const Hero = () => {
       {/* Content overlay - positioned left */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 text-left">
         <div className="max-w-2xl">
-          <h1 className="hero-text text-4xl md:text-6xl lg:text-7xl font-[100] text-primary-foreground mb-6 leading-tight">
+          <h1 className="hero-text text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-[100] text-primary-foreground mb-6 leading-tight">
             Twoja firma znajduje się w kryzysie?
           </h1>
-          <h2 className="hero-text text-3xl md:text-5xl lg:text-6xl font-[100] text-gold mb-8">
+          <h2 className="hero-text text-xl sm:text-3xl md:text-5xl lg:text-6xl font-[100] text-gold mb-8">
             Masz drugą szansę.
           </h2>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-xl leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-xl leading-relaxed">
             Zatrzymaj spiralę problemów, odzyskaj kontrolę i spokój. 
             Pomożemy Ci przetrwać i wyjść z tego silniejszym.
           </p>
