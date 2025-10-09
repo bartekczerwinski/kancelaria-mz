@@ -50,7 +50,7 @@ const handler = async (req: Request): Promise<Response> => {
         email: formData.email,
         phone: formData.phone,
         message: formData.message,
-        contact_method: "website_form",
+        contact_method: "email",
         legal_areas: []
       });
 
