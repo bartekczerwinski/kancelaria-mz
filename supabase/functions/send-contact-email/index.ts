@@ -79,20 +79,26 @@ const handler = async (req: Request): Promise<Response> => {
       </p>
     `;
 
-    // Send email to the law firm
-    const { error: emailError } = await resend.emails.send({
-      from: "Formularz kontaktowy <onboarding@resend.dev>",
-      to: ["kancelaria@misztalzalewski.pl"],
-      subject: emailSubject,
-      html: emailHtml,
-    });
-
-    if (emailError) {
-      console.error("Email sending error:", emailError);
-      throw new Error("Failed to send email");
+    // Send emails with graceful fallback (Resend sandbox may block unverified domains)
+    let firmEmailStatus = 'skipped';
+    try {
+      const firmRes = await resend.emails.send({
+        from: "Formularz kontaktowy <onboarding@resend.dev>",
+        to: ["kancelaria@misztalzalewski.pl"],
+        subject: emailSubject,
+        html: emailHtml,
+      });
+      if ((firmRes as any)?.error) {
+        console.error("Email sending error (firm):", (firmRes as any).error);
+        firmEmailStatus = 'failed';
+      } else {
+        firmEmailStatus = 'sent';
+        console.log("Email sent successfully to kancelaria@misztalzalewski.pl");
+      }
+    } catch (e) {
+      console.error("Email sending exception (firm):", e);
+      firmEmailStatus = 'failed';
     }
-
-    console.log("Email sent successfully to kancelaria@misztalzalewski.pl");
 
     // Send confirmation email to the client
     const confirmationHtml = `
@@ -121,19 +127,32 @@ const handler = async (req: Request): Promise<Response> => {
       </p>
     `;
 
-    await resend.emails.send({
-      from: "Kancelaria Misztal Zalewski <onboarding@resend.dev>",
-      to: [formData.email],
-      subject: "Dziękujemy za kontakt - Kancelaria Misztal Zalewski",
-      html: confirmationHtml,
-    });
-
-    console.log("Confirmation email sent to:", formData.email);
+    let clientEmailStatus = 'skipped';
+    try {
+      const clientRes = await resend.emails.send({
+        from: "Kancelaria Misztal Zalewski <onboarding@resend.dev>",
+        to: [formData.email],
+        subject: "Dziękujemy za kontakt - Kancelaria Misztal Zalewski",
+        html: confirmationHtml,
+      });
+      if ((clientRes as any)?.error) {
+        console.error("Email sending error (client):", (clientRes as any).error);
+        clientEmailStatus = 'failed';
+      } else {
+        clientEmailStatus = 'sent';
+        console.log("Confirmation email sent to:", formData.email);
+      }
+    } catch (e) {
+      console.error("Email sending exception (client):", e);
+      clientEmailStatus = 'failed';
+    }
 
     return new Response(
       JSON.stringify({ 
         success: true, 
-        message: "Email sent successfully" 
+        message: "Lead zapisany. Status e-maili w logach.",
+        firmEmailStatus,
+        clientEmailStatus
       }),
       {
         status: 200,
