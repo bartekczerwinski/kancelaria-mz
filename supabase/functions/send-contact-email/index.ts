@@ -84,7 +84,7 @@ const handler = async (req: Request): Promise<Response> => {
     try {
       const firmRes = await resend.emails.send({
         from: "Formularz kontaktowy <onboarding@resend.dev>",
-        to: ["kancelaria@misztalzalewski.pl"],
+        to: ["adwokat@kzalewski.pl"],
         subject: emailSubject,
         html: emailHtml,
       });
