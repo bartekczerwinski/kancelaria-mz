@@ -83,7 +83,7 @@ const handler = async (req: Request): Promise<Response> => {
     let firmEmailStatus = 'skipped';
     try {
       const firmRes = await resend.emails.send({
-        from: "Formularz kontaktowy <onboarding@resend.dev>",
+        from: "Formularz kontaktowy <formularz@updates.misztalzalewski.pl>",
         to: ["adwokat@kzalewski.pl"],
         subject: emailSubject,
         html: emailHtml,
@@ -130,7 +130,7 @@ const handler = async (req: Request): Promise<Response> => {
     let clientEmailStatus = 'skipped';
     try {
       const clientRes = await resend.emails.send({
-        from: "Kancelaria Misztal Zalewski <onboarding@resend.dev>",
+        from: "Kancelaria Misztal Zalewski <kontakt@updates.misztalzalewski.pl>",
         to: [formData.email],
         subject: "Dziękujemy za kontakt - Kancelaria Misztal Zalewski",
         html: confirmationHtml,
