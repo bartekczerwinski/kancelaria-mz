@@ -40,10 +40,10 @@ const Contact = () => {
               </div>
               <h3 className="text-xl font-[100] mb-2 text-white">Napisz</h3>
               <a 
-                href="mailto:kancelaria@misztalzalewski.pl" 
+                href="mailto:adwokat@kzalewski.pl" 
                 className="text-gold hover:text-gold-dark transition-colors font-semibold"
               >
-                kancelaria@misztalzalewski.pl
+                adwokat@kzalewski.pl
               </a>
             </Card>
 
